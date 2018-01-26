@@ -14,7 +14,7 @@ ENABLED=1
 # unless you know what you're doing.
 SAHOME="/var/lib/spamassassin/"
 
-OPTIONS="--listen-ip=0.0.0.0 --create-prefs --helper-home-dir  --max-children 5 --round-robin -H /var/lib/spamassassin/ --username debian-spamd -A 0.0.0.0/0"
+OPTIONS="--listen-ip=0.0.0.0 --create-prefs --helper-home-dir  --max-children 5 --round-robin -H /var/lib/spamassassin/ --username debian-spamd -A 0.0.0.0/0 -s /proc/1/fd/1"
 
 # Pid file
 # Where should spamd write its PID to file? If you use the -u or

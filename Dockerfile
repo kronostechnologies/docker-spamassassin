@@ -11,10 +11,8 @@ ADD https://github.com/kronostechnologies/docker-init-entrypoint/releases/downlo
 RUN chmod +x /usr/local/bin/entrypoint.sh
 
 # Install start/stop scripts
-COPY ./configuration /k
-
-# Config loader
-RUN ln -sf ./configuration/conf.d/spamassassin-default /etc/default/spamassassin
+COPY ./docker/k /k
+COPY ./docker/etc /etc
 
 # Expose service port
 EXPOSE 783
